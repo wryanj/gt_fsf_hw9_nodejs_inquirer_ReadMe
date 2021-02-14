@@ -32,19 +32,29 @@ const writeFileAsync = util.promisify(fs.writeFile);
             {
                 type: "input",
                 name: "contributing",
-                message: "Who contributed to this application"
+                message: "What are the contribution guidelines for this project?"
             },
             {
                 type: "input",
                 name: "tests",
                 message: "What information is availible to help with testing this application?"
             },
+            {
+                type: "input",
+                name: "email",
+                message: "What is your email address?"
+            },
+            {
+                type: "input",
+                name: "github",
+                message: "What is your github profile name?"
+            },
         ])    
     }
 
 // Define function that takes in an inquirer response and generates some content for a readme...
 // Arrow function syntax says function is called generate Readme, takes in inquirer response as parameter...
-const generateReadMe = ({title,description, installation, usage, contributing, tests }) => { //How does it know these are tied to the response object??? where does it pic this up?
+const generateReadMe = ({title,description, installation, usage, contributing, tests, email, github}) => { //How does it know these are tied to the response object??? where does it pic this up?
 
 // And returns some readme content that I will use template literals to fill in (RESEARCH OUTDENT SO I CAN CODE CLEAR BUT NOT HAVE SPACING IN CONTENT)...
 return `
@@ -62,10 +72,16 @@ ${description}
 ${installation}
 ## Usage
 ${usage}
-## Contributing
+## Contribution Guidelines
 ${contributing}
 ## Tests
 ${tests}
+## Liscences
+
+## Questions
+Email me at ${email} for more information.
+You can also find me on github with the user name ${github}. 
+Check my profile out here: https://github.com/wryanj
 `
 }
 
@@ -79,7 +95,6 @@ const init = () => {
     })
 }
  
-
 
 // Call Init Function (Why does doing this make code more declaritive...)
 init();
