@@ -43,15 +43,21 @@ const writeFileAsync = util.promisify(fs.writeFile);
     }
 
 // Define function that takes in an inquirer response and generates some content for a readme...
-
 // Arrow function syntax says function is called generate Readme, takes in inquirer response as parameter...
 const generateReadMe = ({title,description, installation, usage, contributing, tests }) => { //How does it know these are tied to the response object??? where does it pic this up?
 
 // And returns some readme content that I will use template literals to fill in (RESEARCH OUTDENT SO I CAN CODE CLEAR BUT NOT HAVE SPACING IN CONTENT)...
 return `
 # Title ${title}
-${description}
+
 ## Table of Contents
+1. [Description](#Description)
+2. [Installation](#Installation)
+3. [Usage](#Usage)
+4. [Contributing](#Contributing);
+5. [Tests](#Tests)
+## Description
+${description}
 ## Installation
 ${installation}
 ## Usage
@@ -63,18 +69,19 @@ ${tests}
 `
 }
 
-// Define a function for doing something with the Response I get....
+// Define a function for doing something with the Response I get and wrap it within an init function....
+const init = () => {
     promptUser().then(response => {
         const readMeContent = generateReadMe(response) // I dont totally get why I put response here and inquirere response on 46... I dont get response where it comes from vinquirer response
-        console.log(readMeContent);
         writeFileAsync("ReadMe.md", readMeContent) // Dont get this part, why there is another.then within a .then. Is .then a method of something?
         .then(() => console.log("Success"))
         .catch(err => console.error(err));
     })
+}
+ 
 
 
-// TODO: Create a function to initialize app
-//function init() {}
+// Call Init Function (Why does doing this make code more declaritive...)
+init();
 
-// Function call to initialize app
-//init();
+
