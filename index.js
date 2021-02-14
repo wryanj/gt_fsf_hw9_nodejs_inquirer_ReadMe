@@ -49,7 +49,19 @@ const writeFileAsync = util.promisify(fs.writeFile);
 
         // And returns some readme content that I will use template literals to fill in...
         return `
-        some readme content..
+            # Title
+            
+
+            ## Table of Contents
+
+            ## Installation
+
+            ## Usage
+
+            ## Contributing
+
+            ## Tests
+
         `
     }
 
@@ -62,8 +74,6 @@ const writeFileAsync = util.promisify(fs.writeFile);
         .catch(err => console.error(err));
     })
 
-
-//function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
 //function init() {}
