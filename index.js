@@ -49,19 +49,12 @@ const writeFileAsync = util.promisify(fs.writeFile);
 
         // And returns some readme content that I will use template literals to fill in...
         return `
-            # Title
-            
-
-            ## Table of Contents
-
-            ## Installation
-
-            ## Usage
-
-            ## Contributing
-
-            ## Tests
-
+        # Title
+        ## Table of Contents
+        ## Installation
+        ## Usage
+        ## Contributing
+        ## Tests
         `
     }
 
@@ -69,7 +62,7 @@ const writeFileAsync = util.promisify(fs.writeFile);
     promptUser().then(response => {
         const readMeContent = generateReadMe(response) // I dont totally get why I put response here and inquirere response on 46... I dont get response where it comes from vinquirer response
         console.log(readMeContent);
-        writeFileAsync("./testfiles/ReadMe.md", readMeContent) // Dont get this part, why there is another.then within a .then. Is .then a method of something?
+        writeFileAsync("ReadMe.md", readMeContent) // Dont get this part, why there is another.then within a .then. Is .then a method of something?
         .then(() => console.log("Success"))
         .catch(err => console.error(err));
     })
