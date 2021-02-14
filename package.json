@@ -1,0 +1,22 @@
+{
+  "name": "gt_fsf_hw9_nodejs_inquirer_readme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wryanj/gt_fsf_hw9_nodejs_inquirer_ReadMe.git"
+  },
+  "author": "Ryan Johnson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wryanj/gt_fsf_hw9_nodejs_inquirer_ReadMe/issues"
+  },
+  "homepage": "https://github.com/wryanj/gt_fsf_hw9_nodejs_inquirer_ReadMe#readme",
+  "dependencies": {
+    "inquirer": "^7.3.3"
+  }
+}
