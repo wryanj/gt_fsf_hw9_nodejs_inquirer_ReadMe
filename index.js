@@ -44,19 +44,24 @@ const writeFileAsync = util.promisify(fs.writeFile);
 
 // Define function that takes in an inquirer response and generates some content for a readme...
 
-    // Arrow function syntax says function is called generate Readme, takes in inquirer response as parameter...
-    const generateReadMe = inquirerResponse => {
+// Arrow function syntax says function is called generate Readme, takes in inquirer response as parameter...
+const generateReadMe = ({title,description, installation, usage, contributing, tests }) => { //How does it know these are tied to the response object??? where does it pic this up?
 
-        // And returns some readme content that I will use template literals to fill in...
-        return `
-        # Title
-        ## Table of Contents
-        ## Installation
-        ## Usage
-        ## Contributing
-        ## Tests
-        `
-    }
+// And returns some readme content that I will use template literals to fill in (RESEARCH OUTDENT SO I CAN CODE CLEAR BUT NOT HAVE SPACING IN CONTENT)...
+return `
+# Title ${title}
+${description}
+## Table of Contents
+## Installation
+${installation}
+## Usage
+${usage}
+## Contributing
+${contributing}
+## Tests
+${tests}
+`
+}
 
 // Define a function for doing something with the Response I get....
     promptUser().then(response => {
