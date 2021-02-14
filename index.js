@@ -3,6 +3,8 @@
     const fs = require("fs"); // Included with node
     const util = require("util"); // Included with node
 
+//WHT AM I DOING HERE
+const writeFileAsync = util.promisify(fs.writeFile);
 
 // Define Function to utilize inquirer to get needed information for writing a Readme file with content
     const promptUser = () => {
@@ -53,8 +55,11 @@
 
 // Define a function for doing something with the Response I get....
     promptUser().then(response => {
-        const readMeContent = generateReadMe(response)
+        const readMeContent = generateReadMe(response) // I dont totally get why I put response here and inquirere response on 46... I dont get response where it comes from vinquirer response
         console.log(readMeContent);
+        writeFileAsync("./testfiles/ReadMe.md", readMeContent) // Dont get this part, why there is another.then within a .then. Is .then a method of something?
+        .then(() => console.log("Success"))
+        .catch(err => console.error(err));
     })
 
 
