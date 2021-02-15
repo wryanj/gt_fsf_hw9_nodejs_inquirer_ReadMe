@@ -1,14 +1,14 @@
 // Include packages needed for this application
-    const inquirer = require("inquirer"); // Not included with node- installed with npm
-    const fs = require("fs"); // Included with node
-    const util = require("util"); // Included with node
-const Choices = require("inquirer/lib/objects/choices");
-
-//WHT AM I DOING HERE
+const inquirer = require("inquirer"); // Not included with node- installed with npm
+const fs = require("fs"); // Included with node
+const util = require("util"); // Included with node
+    
+// Use promisitfy to convert fs.writefile method so that it returns response in a promise object rather than using a callback function
 const writeFileAsync = util.promisify(fs.writeFile);
 
-// Define Function to utilize inquirer to get needed information for writing a Readme file with content
+// Define Function to utilize inquirer to get needed information for writing a Readme file with the responses
     const promptUser = () => {
+        console.log("promptuser function started")
         return inquirer.prompt ([
             {
                 type: "input",
@@ -63,11 +63,10 @@ const writeFileAsync = util.promisify(fs.writeFile);
 // Define function that takes in an inquirer response and generates some content for a readme...
 // Arrow function syntax says function is called generate Readme, takes in inquirer response as parameter...
 const generateReadMe = ({title,description, installation, usage, contributing, tests, email, github, liscences}) => { //How does it know these are tied to the response object??? where does it pic this up?
-
+console.log("generate readme function started");
 // And returns some readme content that I will use template literals to fill in (RESEARCH OUTDENT SO I CAN CODE CLEAR BUT NOT HAVE SPACING IN CONTENT)...
 return `
 # Title ${title}
-
 ## Table of Contents
 1. [Description](#Description)
 2. [Installation](#Installation)
@@ -86,7 +85,6 @@ ${contributing}
 ${tests}
 ## Liscences
 ${liscences}
-
 ## Questions
 Email me at ${email} for more information.
 You can also find me on github with the user name ${github}. 
@@ -94,17 +92,32 @@ Check my profile out here: https://github.com/wryanj
 `
 }
 
-// Define a function for doing something with the Response I get and wrap it within an init function....
+// Define a function that kicks off the question / answer / do something with answer chain of events....
 const init = () => {
-    promptUser().then(response => {
-        const readMeContent = generateReadMe(response) // I dont totally get why I put response here and inquirere response on 46... I dont get response where it comes from vinquirer response
-        writeFileAsync("ReadMe.md", readMeContent) // Dont get this part, why there is another.then within a .then. Is .then a method of something?
+    console.log("initi function called")
+
+    // Upon Call of init, Run the prompt user function...
+    promptUser()
+
+        // Then, when the function is completed....
+        .then(response => {
+
+            // Define a variable that holds the content I want to write to a readme file, which is generated with the function I put in it's value...
+            const readMeContent = generateReadMe(response)
+           
+            // Then call the promisified fs.writeFile method to create (or write content to) the file ReadMe.md (in this directory), including the readMeContent I defined..
+            console.log("moving to write file async")
+            writeFileAsync("ReadMe.md", readMeContent) 
+
+        // Then, when the writeFileAsync is completed, if no error console log "success"
         .then(() => console.log("Success"))
+
+        // If after writeFileAsyc completes, an error is detected.. console log the error
         .catch(err => console.error(err));
     })
 }
  
-// Call Init Function (Why does doing this make code more declaritive...)
+// Call Init Function to start the chain of asking questions, getting answers, then writing a new file...
 init();
 
 
