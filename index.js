@@ -2,6 +2,7 @@
     const inquirer = require("inquirer"); // Not included with node- installed with npm
     const fs = require("fs"); // Included with node
     const util = require("util"); // Included with node
+const Choices = require("inquirer/lib/objects/choices");
 
 //WHT AM I DOING HERE
 const writeFileAsync = util.promisify(fs.writeFile);
@@ -22,7 +23,7 @@ const writeFileAsync = util.promisify(fs.writeFile);
             {
                 type: "input",
                 name: "installation",
-                message: "What is needed to install this application?"
+                message: "What installations are needed to install this application (e.x node librairies)"
             },
             {
                 type: "input",
@@ -37,7 +38,7 @@ const writeFileAsync = util.promisify(fs.writeFile);
             {
                 type: "input",
                 name: "tests",
-                message: "What information is availible to help with testing this application?"
+                message: "What command should be run to run tests?"
             },
             {
                 type: "input",
@@ -49,12 +50,19 @@ const writeFileAsync = util.promisify(fs.writeFile);
                 name: "github",
                 message: "What is your github profile name?"
             },
+            {
+                type: "list",
+                name: "liscences",
+                message: "What liscences does should this project have?",
+                choices: ["MIT", "APACHE 2.0", "GPL 3.0", "BSD 3", "None"]
+            },
+            
         ])    
     }
 
 // Define function that takes in an inquirer response and generates some content for a readme...
 // Arrow function syntax says function is called generate Readme, takes in inquirer response as parameter...
-const generateReadMe = ({title,description, installation, usage, contributing, tests, email, github}) => { //How does it know these are tied to the response object??? where does it pic this up?
+const generateReadMe = ({title,description, installation, usage, contributing, tests, email, github, liscences}) => { //How does it know these are tied to the response object??? where does it pic this up?
 
 // And returns some readme content that I will use template literals to fill in (RESEARCH OUTDENT SO I CAN CODE CLEAR BUT NOT HAVE SPACING IN CONTENT)...
 return `
@@ -77,6 +85,7 @@ ${contributing}
 ## Tests
 ${tests}
 ## Liscences
+${liscences}
 
 ## Questions
 Email me at ${email} for more information.
@@ -95,7 +104,6 @@ const init = () => {
     })
 }
  
-
 // Call Init Function (Why does doing this make code more declaritive...)
 init();
 
