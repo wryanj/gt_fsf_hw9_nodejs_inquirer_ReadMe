@@ -14,7 +14,7 @@
 
 // Define Function to utilize inquirer to get needed information for writing a Readme file with the responses
     const promptUser = () => {
-    console.log("Prompt User Function Started Using Inquirer prompt method")
+    
         return inquirer.prompt ([
             {
                 type: "input",
@@ -67,7 +67,7 @@
 
 // Define Function to render a liscence badge based on inquirer input...
     const renderLicenseBadge = (x) => {
-        console.log("x is determined in this function to be..." + x);
+        
         if (x === "Apache 2.0") {
             licenceBadge = "![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)";
         }
@@ -91,7 +91,7 @@
 
 // Define function to render a licence link based on inquirer input..
     const renderLicenseLink = (x) => {
-        console.log("x is determined in this function to be..." + x);
+        
         if (x === "Apache 2.0") {
             licenceLink = "https://opensource.org/licenses/Apache-2.0";
         }
@@ -116,14 +116,11 @@
 // Define function that takes in an inquirer response and generates some content for a readme...
 // Arrow function syntax says function is called generate Readme, takes in inquirer response as parameter and is using "function paramater desstructuring" to destruction the param...
 const generateReadMeContent = ({title,description, installation, usage, contributing, tests, email, github, licences}) => { 
-console.log("Generate Readme Content Started");
-console.log("licences detected from ip as... " + licences);
+// Get Liscence badge
 renderLicenseBadge(licences);
-console.log("the licenceBadge variable is now set to..." + licenceBadge)
-console.log("licence badge is showing as... " + licenceBadge);
+// Get Liscence link
 renderLicenseLink(licences);
-console.log("Rendered licence link is showing as..." + licenceLink);
-// And returns some readme content that I will use template literals to fill in (RESEARCH OUTDENT SO I CAN CODE CLEAR BUT NOT HAVE SPACING IN CONTENT)...
+// And return this content into a new (or existing) readme file in this directory (RESEARCH OUTDENT SO I CAN CODE CLEAR BUT NOT HAVE SPACING IN CONTENT)...
 return `
 # Title ${title}
 ## Table of Contents
@@ -152,23 +149,19 @@ Check my profile out here: https://github.com/wryanj
 `
 }
 
-// Define a function that kicks off the question / answer / do something with answer chain of events....
+// Define a function that kicks off the question / answer / do something sequence using functions defined above....
 const init = () => {
-console.log("Init function invoked, process started")
 
     // Upon Call of init, Run the prompt user function...
     promptUser()
 
         // Then, when the function is completed....(whats it doing with response...)
         .then(response => {
-        console.log("Prompt User function complete. Recorded response is - " + JSON.stringify(response));
 
             // Define a variable that holds the content I want to write to a readme file, which is generated via invoking the variable holding the function I defined to do this...
             const readMeContent = generateReadMeContent(response)
            
             // Then call the promisified fs.writeFile method to create (or write content to) the file ReadMe.md (in this directory), including the readMeContent I defined..
-            console.log("Generate Readme Content Complted, Moving to WriteFileAsync");
-            console.log("readMEContent recorded as : " + JSON.stringify(readMeContent));
             writeFileAsync("ReadMe.md", readMeContent) 
 
         // Then, when the writeFileAsync is completed, if no error console log "success"
