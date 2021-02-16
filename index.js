@@ -1,14 +1,16 @@
-// Include packages needed for this application
-const inquirer = require("inquirer"); 
-const fs = require("fs"); 
-const util = require("util"); 
+// Up front dependencies, global variale definitions & conversions
 
-// Define global variables to set value to later
-let licenceBadge;
-let licenceLink;
-    
-// Use promisify to convert fs.writefile method so that it returns response in a promise object rather than using a callback function
-const writeFileAsync = util.promisify(fs.writeFile);
+    // Include packages needed for this application
+    const inquirer = require("inquirer"); 
+    const fs = require("fs"); 
+    const util = require("util"); 
+
+    // Define global variables to set value to later
+    let licenceBadge;
+    let licenceLink;
+        
+    // Use promisify to convert fs.writefile method so that it returns response in a promise object rather than using a callback function
+    const writeFileAsync = util.promisify(fs.writeFile);
 
 // Define Function to utilize inquirer to get needed information for writing a Readme file with the responses
     const promptUser = () => {
@@ -99,11 +101,11 @@ const writeFileAsync = util.promisify(fs.writeFile);
         }
     
         else if (x === "GPL 3.0") {
-            licenceLink = "[http://www.gnu.org/licenses/gpl-3.0";
+            licenceLink = "http://www.gnu.org/licenses/gpl-3.0";
         }
     
         else if (x === "BSD 3") {
-            licenceLink = "[https://opensource.org/licenses/BSD-3-Clause";
+            licenceLink = "https://opensource.org/licenses/BSD-3-Clause";
         }
     
         else if (x === "None") {
@@ -141,7 +143,7 @@ ${contributing}
 ## Tests
 ${tests}
 ## Licenses
-${licenceBadge}\n
+${licenceBadge}  
 ${licenceLink}
 ## Questions
 Email me at ${email} for more information.
