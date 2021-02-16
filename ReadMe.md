@@ -17,7 +17,7 @@ t
 ## Tests
 t
 ## Licenses
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)]
+![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
 https://opensource.org/licenses/Apache-2.0
 ## Questions
 Email me at t for more information.

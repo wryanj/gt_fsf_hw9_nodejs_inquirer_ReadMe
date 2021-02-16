@@ -2,7 +2,6 @@
 const inquirer = require("inquirer"); 
 const fs = require("fs"); 
 const util = require("util"); 
-const licenceRender = require ("./utils/licenseRenderFunctions");
     
 // Use promisify to convert fs.writefile method so that it returns response in a promise object rather than using a callback function
 const writeFileAsync = util.promisify(fs.writeFile);
@@ -61,47 +60,47 @@ const writeFileAsync = util.promisify(fs.writeFile);
     }
 
 // Define Function to render a liscence badge based on inquirer input...
-    const renderLicenseBadge = (license) => {
-        if (license = "Apache 2.0") {
-          return "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)]";
+    const renderLicenseBadge = (x) => {
+        if (x = "Apache 2.0") {
+          return "![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)";
         }
       
-        if (license = "MIT") {
-          return "[![License]([![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]";
+        else if (x = "MIT") {
+          return "![License]([![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)";
         }
       
-        if (license = "GPL 3.0") {
-          return "[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)]";
+        else if (x = "GPL 3.0") {
+          return "![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)";
         }
       
-        if (license = "BSD 3") {
-          return "[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)]";
+        else if (x = "BSD 3") {
+          return "![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)";
         }
       
-        if (license = "None") {
+        else if (x = "None") {
           return "";
         }
       }
 
 // Define function to render a licence link based on inquirer input..
-    const renderLicenseLink = (license) => {
-        if (license = "Apache 2.0") {
+    const renderLicenseLink = (x) => {
+        if (x = "Apache 2.0") {
         return "https://opensource.org/licenses/Apache-2.0";
         }
     
-        if (license = "MIT") {
+        else if (x = "MIT") {
         return "https://opensource.org/licenses/MIT";
         }
     
-        if (license = "GPL 3.0") {
+        else if (x = "GPL 3.0") {
         return "[http://www.gnu.org/licenses/gpl-3.0";
         }
     
-        if (license = "BSD 3") {
+        else if (x = "BSD 3") {
         return "[https://opensource.org/licenses/BSD-3-Clause";
         }
     
-        if (license = "None") {
+        else if (x = "None") {
         return "";
         }
     }
@@ -110,6 +109,7 @@ const writeFileAsync = util.promisify(fs.writeFile);
 // Arrow function syntax says function is called generate Readme, takes in inquirer response as parameter and is using "function paramater desstructuring" to destruction the param...
 const generateReadMeContent = ({title,description, installation, usage, contributing, tests, email, github, licences}) => { 
 console.log("Generate Readme Content Started");
+console.log("licences detected from ip as... " + licences);
 const licenceBadge = renderLicenseBadge(licences);
 console.log("licence badge is showing as... " + licenceBadge);
 const licenceLink = renderLicenseLink(licences);
