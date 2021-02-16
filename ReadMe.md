@@ -15,10 +15,11 @@ t
 ## Contribution Guidelines
 t
 ## Tests
-t
+tt
 ## Licenses
-![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
-https://opensource.org/licenses/Apache-2.0
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
+https://opensource.org/licenses/MIT
 ## Questions
 Email me at t for more information.
 You can also find me on github with the user name t. 

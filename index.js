@@ -2,6 +2,10 @@
 const inquirer = require("inquirer"); 
 const fs = require("fs"); 
 const util = require("util"); 
+
+// Define global variables to set value to later
+let licenceBadge;
+let licenceLink;
     
 // Use promisify to convert fs.writefile method so that it returns response in a promise object rather than using a callback function
 const writeFileAsync = util.promisify(fs.writeFile);
@@ -61,47 +65,49 @@ const writeFileAsync = util.promisify(fs.writeFile);
 
 // Define Function to render a liscence badge based on inquirer input...
     const renderLicenseBadge = (x) => {
-        if (x = "Apache 2.0") {
-          return "![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)";
+        console.log("x is determined in this function to be..." + x);
+        if (x === "Apache 2.0") {
+            licenceBadge = "![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)";
         }
       
-        else if (x = "MIT") {
-          return "![License]([![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)";
+        else if (x === "MIT") {
+            licenceBadge = "![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)";
         }
       
-        else if (x = "GPL 3.0") {
-          return "![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)";
+        else if (x === "GPL 3.0") {
+            licenceBadge = "![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)";
         }
       
-        else if (x = "BSD 3") {
-          return "![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)";
+        else if (x === "BSD 3") {
+            licenceBadge = "![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)";
         }
       
-        else if (x = "None") {
-          return "";
+        else if (x === "None") {
+            licenceBadge = "";
         }
       }
 
 // Define function to render a licence link based on inquirer input..
     const renderLicenseLink = (x) => {
-        if (x = "Apache 2.0") {
-        return "https://opensource.org/licenses/Apache-2.0";
+        console.log("x is determined in this function to be..." + x);
+        if (x === "Apache 2.0") {
+            licenceLink = "https://opensource.org/licenses/Apache-2.0";
         }
     
-        else if (x = "MIT") {
-        return "https://opensource.org/licenses/MIT";
+        else if (x === "MIT") {
+            licenceLink = "https://opensource.org/licenses/MIT";
         }
     
-        else if (x = "GPL 3.0") {
-        return "[http://www.gnu.org/licenses/gpl-3.0";
+        else if (x === "GPL 3.0") {
+            licenceLink = "[http://www.gnu.org/licenses/gpl-3.0";
         }
     
-        else if (x = "BSD 3") {
-        return "[https://opensource.org/licenses/BSD-3-Clause";
+        else if (x === "BSD 3") {
+            licenceLink = "[https://opensource.org/licenses/BSD-3-Clause";
         }
     
-        else if (x = "None") {
-        return "";
+        else if (x === "None") {
+            licenceLink = "";
         }
     }
 
@@ -110,9 +116,10 @@ const writeFileAsync = util.promisify(fs.writeFile);
 const generateReadMeContent = ({title,description, installation, usage, contributing, tests, email, github, licences}) => { 
 console.log("Generate Readme Content Started");
 console.log("licences detected from ip as... " + licences);
-const licenceBadge = renderLicenseBadge(licences);
+renderLicenseBadge(licences);
+console.log("the licenceBadge variable is now set to..." + licenceBadge)
 console.log("licence badge is showing as... " + licenceBadge);
-const licenceLink = renderLicenseLink(licences);
+renderLicenseLink(licences);
 console.log("Rendered licence link is showing as..." + licenceLink);
 // And returns some readme content that I will use template literals to fill in (RESEARCH OUTDENT SO I CAN CODE CLEAR BUT NOT HAVE SPACING IN CONTENT)...
 return `
@@ -134,7 +141,7 @@ ${contributing}
 ## Tests
 ${tests}
 ## Licenses
-${licenceBadge}
+${licenceBadge}\n
 ${licenceLink}
 ## Questions
 Email me at ${email} for more information.
