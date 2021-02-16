@@ -1,5 +1,5 @@
 
-# Title Testing
+# TITLE TEST
 ## Table of Contents
 1. [Description](#Description)
 2. [Installation](#Installation)
@@ -7,19 +7,19 @@
 4. [Contributing](#Contributing);
 5. [Tests](#Tests)
 ## Description
-Testing
+
 ## Installation
-Testing
+
 ## Usage
-Testing
+
 ## Contribution Guidelines
-Testing
+
 ## Tests
-Testing
+
 ## Licenses
-![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)  
-https://opensource.org/licenses/BSD-3-Clause
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)  
+https://opensource.org/licenses/MIT
 ## Questions
-Email me at Testing for more information.
-You can also find me on github with the user name Testin. 
+Email me at  for more information.
+You can also find me on github with the user name . 
 Check my profile out here: https://github.com/wryanj
