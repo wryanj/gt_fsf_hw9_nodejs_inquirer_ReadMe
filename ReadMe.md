@@ -1,9 +1,5 @@
 
-<<<<<<< HEAD
 # Title t
-=======
-# Testing Auto-Create
->>>>>>> a1b100ea6f5b06af4799452a96900f62613cfd0a
 ## Table of Contents
 1. [Description](#Description)
 2. [Installation](#Installation)
@@ -20,7 +16,7 @@ t
 t
 ## Tests
 t
-## Liscences
+## Licenses
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)]
 https://opensource.org/licenses/Apache-2.0
 ## Questions
