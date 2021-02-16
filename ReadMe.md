@@ -1,5 +1,9 @@
 
+<<<<<<< HEAD
 # Title t
+=======
+# Testing Auto-Create
+>>>>>>> a1b100ea6f5b06af4799452a96900f62613cfd0a
 ## Table of Contents
 1. [Description](#Description)
 2. [Installation](#Installation)
