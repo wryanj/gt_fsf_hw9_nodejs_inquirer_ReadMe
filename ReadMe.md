@@ -1,5 +1,5 @@
 
-# Title Testing Auto-Create
+# Title t
 ## Table of Contents
 1. [Description](#Description)
 2. [Installation](#Installation)
@@ -7,18 +7,19 @@
 4. [Contributing](#Contributing);
 5. [Tests](#Tests)
 ## Description
-This readme is a self writing self creating document produced by a node js applicatoin.
+t
 ## Installation
-npm inquirer should be installed.
+t
 ## Usage
-For creating quick readmes.
+t
 ## Contribution Guidelines
-This is an open project, contributions can be submitted. 
+t
 ## Tests
-no unit testing is availible.
+t
 ## Liscences
-None
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)]
+https://opensource.org/licenses/Apache-2.0
 ## Questions
-Email me at ryanjohnson9685@gmail.com for more information.
-You can also find me on github with the user name wryanj. 
+Email me at t for more information.
+You can also find me on github with the user name t. 
 Check my profile out here: https://github.com/wryanj
