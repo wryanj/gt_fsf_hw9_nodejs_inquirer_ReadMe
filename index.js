@@ -167,7 +167,7 @@ Check my profile out here: https://github.com/wryanj
                 const readMeContent = generateReadMeContent(response)
             
                 // Once conetent is generated, write the file using promisified fs.writeFile method....
-                writeFileAsync("ReadMe.md", readMeContent) 
+                writeFileAsync("./generated_test_files/ReadMe.md", readMeContent) 
 
             // Then, when the writeFileAsync is completed, if no error console log "success"...
             .then(() => console.log("Success"))
