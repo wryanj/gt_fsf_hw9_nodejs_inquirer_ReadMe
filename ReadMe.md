@@ -1,5 +1,5 @@
 
-# TITLE TEST
+# Testing
 ## Table of Contents
 1. [Description](#Description)
 2. [Installation](#Installation)
@@ -7,19 +7,19 @@
 4. [Contributing](#Contributing);
 5. [Tests](#Tests)
 ## Description
-
+T
 ## Installation
-
+R
 ## Usage
-
+Y
 ## Contribution Guidelines
-
+A
 ## Tests
-
+N
 ## Licenses
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)  
-https://opensource.org/licenses/MIT
+undefined  
+undefined
 ## Questions
-Email me at  for more information.
-You can also find me on github with the user name . 
+Email me at J for more information.
+You can also find me on github with the user name H. 
 Check my profile out here: https://github.com/wryanj
