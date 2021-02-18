@@ -17,8 +17,8 @@ A demonstration of the creation process can be seen below.
 This application can quickly create a formatted readme with initial content.
 
 ## Licenses
-![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)  
-https://opensource.org/licenses/BSD-3-Clause
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)  
+https://opensource.org/licenses/MIT
 
 ## Questions
 Email me at ryanjohnson9685@gmail.com for more information.
