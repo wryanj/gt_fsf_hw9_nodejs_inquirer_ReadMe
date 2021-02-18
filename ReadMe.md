@@ -9,14 +9,14 @@
 7. [Credits](#Credits);
 
 ## Description
-This project required us to code an appplication that would automatically write initial readme content based on prompted answers using npm inquirer and node JS, and then write that file using the fs writeFile method avalible in nodeJS. Motivation for this assignment was to learn more about node js, inqirer, and concepts such as promises that I had not had much exposure too up until this point in our course. 
+This project required us to code an application that would automatically write some readme content based on prompted answers using npm inquirer and node JS, and then create a readme file within a specified directory using the fs writeFile method available in nodeJS. Motivation for this assignment was to learn more about node js, inqirer, and concepts such as promises that I had not had much exposure too up until this point in our course. 
 
 A demonstration of the application and its functionality can be seen below ( I specified my destination for the readme files to be within a test folder so that I would not overwrite my actual readme here as I continued to explore and test additional concepts with this same code after I had it fully working to satisfy our assignment acceptance criteria. )
 
 ![Demo](Demonstration-Video.gif)
 
 ## Usage
-This application can be used to quickly generate a formatted readme for your repo. By running the application from the terminal you can enter prompted answers to questions, and have the answers written into a created readme formatted with a table of contents and headings. Make sure that youSee the recorded demo in the description section for more info. 
+This application can be used to quickly generate a formatted readme for your repo. By running the application from the terminal you can enter prompted answers to questions, and have the answers written into a formatted readme that includes a table of contents and a title / headings. See the recorded demo in the description section for more info. 
 
 ## Installation
 To install this application you just need to ensure that you have nodeJS and run the npm i command to get required dependencies, such as inquirer.
