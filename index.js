@@ -130,13 +130,15 @@ return `
 3. [Usage](#Usage)
 4. [Contributing](#Contributing);
 5. [Tests](#Tests)
+5. [Licenses](#Licenses)
+5. [Questions](#Questions)
 ## Description
 ${description}
 ## Installation
 ${installation}
 ## Usage
 ${usage}
-## Contribution Guidelines
+## Contributing
 ${contributing}
 ## Tests
 ${tests}
@@ -157,24 +159,24 @@ Check my profile out here: https://github.com/wryanj
     // Wrap sequence in a single function to be declaritive...
     const init = () => {
 
-        // Upon Call of init, prompt the user for inputs
+        // Upon Call of init, first prompt the user for inputs via promptUser...
         promptUser()
 
-            // Then, when the function is completed take the result (the prompt response)...
+            // Then, when the promptUser function is completed take the result (defined here as "response")...
             .then(response => {
 
                 // And pass it as a parameter to the generate readme content so I can generate content to write to a file...
-                const readMeContent = generateReadMeContent(response)
+                const readMeContent = generateReadMeContent(response);
             
                 // Once conetent is generated, write the file using promisified fs.writeFile method....
                 writeFileAsync("./generated_test_files/ReadMe.md", readMeContent) 
 
-            // Then, when the writeFileAsync is completed, if no error console log "success"...
-            .then(() => console.log("Success"))
+                    // Then, when the writeFileAsync is completed, if no error console log "success"...
+                    .then(() => console.log("Success"))
 
-            // If at any time in the chain there is a failure, console log an error and stop the sequence..
-            .catch(err => console.error(err));
-        })
+                    // If at any time in the chain there is a failure, console log an error and stop the sequence..
+                    .catch(err => console.error(err));
+            })
     }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
