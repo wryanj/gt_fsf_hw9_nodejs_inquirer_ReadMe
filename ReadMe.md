@@ -9,7 +9,9 @@
 ## Description
 This project required us to code an appplication that would automatically write initial readme content based on prompted answers using npm inquirer and node JS, and then write that file using the fs writeFile method avalible in nodeJS.
 
-![ ] (Demonstration-Video.gif)
+A demonstration of the creation process can be seen below. 
+
+![Demo](Demonstration-Video.gif)
 
 ## Usage
 This application can quickly create a formatted readme with initial content.
