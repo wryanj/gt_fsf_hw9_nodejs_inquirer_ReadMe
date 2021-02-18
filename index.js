@@ -74,7 +74,7 @@
     // Determine what badge to display based on license type selected during the prompt...
     const renderLicenseBadge = (x) => {
         
-        if (x === "Apache 2.0") {
+        if (x === "APACHE 2.0") {
             licenceBadge = "![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)";
         }
         else if (x === "MIT") {
@@ -94,7 +94,7 @@
     // Determine what license link to display based on license type selected during the prompt...
     const renderLicenseLink = (x) => {
         
-        if (x === "Apache 2.0") {
+        if (x === "APACHE 2.0") {
             licenceLink = "https://opensource.org/licenses/Apache-2.0";
         }
         else if (x === "MIT") {
