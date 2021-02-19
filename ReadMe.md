@@ -11,8 +11,12 @@
 ## Description
 This project required us to code an application that would automatically write some readme content based on prompted answers using npm inquirer and node JS, and then create a readme file within a specified directory using the fs writeFile method available in nodeJS. Motivation for this assignment was to learn more about node js, inqirer, and concepts such as promises that I had not had much exposure too up until this point in our course. 
 
-A demonstration of the application and its functionality can be seen below ( I specified my destination for the readme files to be within a test folder so that I would not overwrite my actual readme here as I continued to explore and test additional concepts with this same code after I had it fully working to satisfy our assignment acceptance criteria. )
+A demonstration of the application and its functionality can be seen below ( I specified my destination for the readme files to be within a test folder so that I would not overwrite my actual readme here as I continued to explore and test additional concepts with this same code after I had it fully working to satisfy our assignment acceptance criteria. ) A screenshot illustrating the command line inputs, the readme file and how it formats is also provided. 
 
+**Screenshot**
+![image](https://user-images.githubusercontent.com/72420733/108548026-44940680-72b9-11eb-87b5-1fb8f5e5bd4f.png)
+
+**Demo Video**
 ![Demo](Demonstration-Video.gif)
 
 ## Usage

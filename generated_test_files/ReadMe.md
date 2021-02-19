@@ -1,5 +1,5 @@
 
-# My Readme From NodeJS
+# Title of My Readme
 ## Table of Contents
 1. [Description](#Description)
 2. [Installation](#Installation)
@@ -9,19 +9,19 @@
 5. [Licenses](#Licenses)
 5. [Questions](#Questions)
 ## Description
-description...
+Description of my application...
 ## Installation
-....
+npm i for inquirer...
 ## Usage
-.....
+To create readmes
 ## Contributing
-....
+Its open to contribution...
 ## Tests
-.....
+no tests included for this application yet
 ## Licenses
-![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)  
-https://opensource.org/licenses/Apache-2.0
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)  
+https://opensource.org/licenses/MIT
 ## Questions
-Email me at email... for more information.
-You can also find me on github with the user name username..... 
+Email me at my email... for more information.
+You can also find me on github with the user name my wryanj. 
 Check my profile out here: https://github.com/wryanj
