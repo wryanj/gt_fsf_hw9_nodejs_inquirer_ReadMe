@@ -1,27 +1,27 @@
 
-# Title of My Readme
+# My Readme Title
 ## Table of Contents
 1. [Description](#Description)
 2. [Installation](#Installation)
 3. [Usage](#Usage)
-4. [Contributing](#Contributing);
+4. [Contributing](#Contributing)
 5. [Tests](#Tests)
 5. [Licenses](#Licenses)
 5. [Questions](#Questions)
 ## Description
-Description of my application...
+Description
 ## Installation
-npm i for inquirer...
+Installations here
 ## Usage
-To create readmes
+To make readmes
 ## Contributing
-Its open to contribution...
+contribution guidelines
 ## Tests
-no tests included for this application yet
+npm i
 ## Licenses
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)  
 https://opensource.org/licenses/MIT
 ## Questions
-Email me at my email... for more information.
-You can also find me on github with the user name my wryanj. 
+Email me at bigdawg@hotmail for more information.
+You can also find me on github with the user name bigdawg. 
 Check my profile out here: https://github.com/wryanj

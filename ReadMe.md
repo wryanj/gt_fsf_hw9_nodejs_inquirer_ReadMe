@@ -14,7 +14,7 @@ This project required us to code an application that would automatically write s
 A demonstration of the application and its functionality can be seen below ( I specified my destination for the readme files to be within a test folder so that I would not overwrite my actual readme here as I continued to explore and test additional concepts with this same code after I had it fully working to satisfy our assignment acceptance criteria. ) A screenshot illustrating the command line inputs, the readme file and how it formats is also provided. 
 
 **Screenshot**
-![image](https://user-images.githubusercontent.com/72420733/108548026-44940680-72b9-11eb-87b5-1fb8f5e5bd4f.png)
+![image](https://user-images.githubusercontent.com/72420733/108603996-3d343200-7379-11eb-8504-907a12222cce.png)
 
 **Demo Video**
 ![Demo](Demonstration-Video.gif)
