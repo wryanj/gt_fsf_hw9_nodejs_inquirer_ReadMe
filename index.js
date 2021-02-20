@@ -128,7 +128,7 @@ return `
 1. [Description](#Description)
 2. [Installation](#Installation)
 3. [Usage](#Usage)
-4. [Contributing](#Contributing);
+4. [Contributing](#Contributing)
 5. [Tests](#Tests)
 5. [Licenses](#Licenses)
 5. [Questions](#Questions)

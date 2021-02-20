@@ -4,9 +4,9 @@
 1. [Description](#Description)
 3. [Usage](#Usage)
 4. [Installation](#Installation)
-5. [Licenses](#Licenses);
-6. [Questions](#Questions);
-7. [Credits](#Credits);
+5. [Licenses](#Licenses)
+6. [Questions](#Questions)
+7. [Credits](#Credits)
 
 ## Description
 This project required us to code an application that would automatically write some readme content based on prompted answers using npm inquirer and node JS, and then create a readme file within a specified directory using the fs writeFile method available in nodeJS. Motivation for this assignment was to learn more about node js, inqirer, and concepts such as promises that I had not had much exposure too up until this point in our course. 
